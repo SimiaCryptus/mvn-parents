@@ -11,3 +11,5 @@ pom.xml.tag
 pom.xml.versionsBackup
 release.properties
 target/
+*.hprof
+
