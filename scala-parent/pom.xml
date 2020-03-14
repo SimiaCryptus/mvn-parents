@@ -24,7 +24,7 @@
     <parent>
         <groupId>com.simiacryptus</groupId>
         <artifactId>java-parent</artifactId>
-        <version>1.8.1-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../java-parent/</relativePath>
     </parent>
 
@@ -35,9 +35,9 @@
     <url>https://simiacryptus.github.io/${github.project}/</url>
     <properties>
         <github.project>data-science-tools</github.project>
-        <scala.mjversion>2.11</scala.mjversion>
-        <spark.version>2.4.0</spark.version>
-        <scala.version>2.11.12</scala.version>
+        <scala.mjversion>2.12</scala.mjversion>
+        <scala.version>2.12.10</scala.version>
+        <spark.version>2.4.5</spark.version>
     </properties>
     <distributionManagement>
         <site>
@@ -142,7 +142,7 @@
             <dependency>
                 <groupId>org.scala-lang.modules</groupId>
                 <artifactId>scala-xml_${scala.mjversion}</artifactId>
-                <version>1.1.1</version>
+                <version>1.2.0</version>
             </dependency>
             <dependency>
                 <groupId>com.github.haifengl</groupId>
@@ -152,27 +152,27 @@
             <dependency>
                 <groupId>org.scalatest</groupId>
                 <artifactId>scalatest_${scala.mjversion}</artifactId>
-                <version>3.2.0-SNAP10</version>
+                <version>3.3.0-SNAP2</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>com.twitter</groupId>
                 <artifactId>chill_${scala.mjversion}</artifactId>
-                <version>0.9.3</version>
+                <version>0.9.5</version>
             </dependency>
             <dependency>
                 <groupId>org.typelevel</groupId>
-                <artifactId>cats-core_2.11</artifactId>
+                <artifactId>cats-core_${scala.mjversion}</artifactId>
                 <version>2.0.0</version>
             </dependency>
             <dependency>
                 <groupId>org.typelevel</groupId>
-                <artifactId>cats-macros_2.11</artifactId>
+                <artifactId>cats-macros_${scala.mjversion}</artifactId>
                 <version>2.0.0</version>
             </dependency>
             <dependency>
                 <groupId>org.typelevel</groupId>
-                <artifactId>cats-kernel_2.11</artifactId>
+                <artifactId>cats-kernel_${scala.mjversion}</artifactId>
                 <version>2.0.0</version>
             </dependency>
             <dependency>
