@@ -23,7 +23,7 @@
 
     <groupId>com.simiacryptus</groupId>
     <artifactId>java-parent</artifactId>
-    <version>2.0.0</version>
+    <version>MINDSEYE-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>Parent Module for Java Projects</description>
     <url>https://simiacryptus.github.io/${github.project}/</url>
@@ -82,8 +82,8 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
         <site>
-            <id>github</id>
-            <url>https://simiacryptus.github.io/${github.project}/</url>
+            <id>simiacryptus</id>
+            <url>s3://simiacryptus/release/${project.version}/${github.project}/</url>
         </site>
     </distributionManagement>
 
@@ -172,6 +172,13 @@
                 </executions>
             </plugin>
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>com.github.platform-team</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>6.0.0</version>
+            </extension>
+        </extensions>
     </build>
 
     <profiles>
