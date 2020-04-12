@@ -83,7 +83,7 @@
         </repository>
         <site>
             <id>simiacryptus</id>
-            <url>s3://simiacryptus/release/${project.version}/${github.project}/</url>
+            <url>s3://simiacryptus/release/${project.version}/</url>
         </site>
     </distributionManagement>
 
@@ -98,7 +98,7 @@
                         <dependency>
                             <groupId>com.github.platform-team</groupId>
                             <artifactId>aws-maven</artifactId>
-                            <version>6.0.0</version>
+                            <version>6.1.0</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -172,7 +172,7 @@
             <extension>
                 <groupId>com.github.platform-team</groupId>
                 <artifactId>aws-maven</artifactId>
-                <version>6.0.0</version>
+                <version>6.1.0</version>
             </extension>
         </extensions>
     </build>
