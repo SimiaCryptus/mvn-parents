@@ -26,18 +26,17 @@
     <version>MINDSEYE-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>Parent Module for Java Projects</description>
-    <url>https://simiacryptus.github.io/${github.project}/</url>
+
     <scm>
-        <connection>scm:git:git@github.com:SimiaCryptus/${github.project}.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/SimiaCryptus/${github.project}.git</developerConnection>
-        <url>https://github.com/SimiaCryptus/${github.project}/tree/master</url>
+        <connection>scm:git:git@github.com:SimiaCryptus/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/SimiaCryptus/${project.artifactId}.git</developerConnection>
+        <url>https://github.com/SimiaCryptus/${project.artifactId}/tree/master</url>
     </scm>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <github.project>${project.artifactId}</github.project>
         <slf4j.version>2.0.0-alpha1</slf4j.version>
         <aws-sdk.version>1.11.742</aws-sdk.version>
         <hadoop.version>3.2.1</hadoop.version>
@@ -83,7 +82,7 @@
         </repository>
         <site>
             <id>simiacryptus</id>
-            <url>s3://simiacryptus/release/${project.version}/</url>
+            <url>s3://code.simiacrypt.us/release/${project.version}/</url>
         </site>
     </distributionManagement>
 
@@ -191,6 +190,17 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.2.0</version>
+                <configuration>
+                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+                    <docletArtifact>
+                        <groupId>org.umlgraph</groupId>
+                        <artifactId>doclet</artifactId>
+                        <version>5.1</version>
+                    </docletArtifact>
+                    <additionalOptions>
+                        <additionalOption>-views</additionalOption>
+                    </additionalOptions>
+                </configuration>
                 <reportSets>
                     <reportSet>
                         <id>default</id>

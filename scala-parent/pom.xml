@@ -32,7 +32,7 @@
     <packaging>pom</packaging>
 
     <description>Parent module for scala projects</description>
-    <url>https://simiacryptus.github.io/${github.project}/</url>
+
     <properties>
         <scala.mjversion>2.12</scala.mjversion>
         <scala.version>2.12.10</scala.version>
