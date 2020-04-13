@@ -48,7 +48,7 @@
         <smile.version>2.2.2</smile.version>
     </properties>
     <name>${project.groupId}:${project.artifactId}</name>
-    <url>http://code.simiacrypt.us/release/${project.version}/${project.name}/</url>
+    <url>http://code.simiacrypt.us/release/${project.version}/</url>
     <organization>
         <name>SimiaCryptus Software</name>
         <url>https://simiacryptus.com</url>
@@ -223,37 +223,7 @@
         <profile>
             <id>release</id>
             <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-scm-publish-plugin</artifactId>
-                            <version>3.0.0</version>
-                            <extensions>true</extensions>
-                            <configuration>
-                                <pubScmUrl>scm:git:ssh://git@github.com/SimiaCryptus/${github.project}.git</pubScmUrl>
-                                <!--<mask>${project.reporting.outputDirectory}</mask>-->
-                                <checkoutDirectory>${project.build.outputDirectory}/site-deploy</checkoutDirectory>
-                                <checkinComment>Update files for ${project.version}</checkinComment>
-                                <skipDeletedFiles>true</skipDeletedFiles>
-                                <scmBranch>gh-pages</scmBranch>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
                 <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-scm-publish-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>publish-scm</goal>
-                                </goals>
-                                <phase>site</phase>
-                            </execution>
-                        </executions>
-                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
