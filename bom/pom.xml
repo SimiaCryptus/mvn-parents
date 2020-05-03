@@ -39,6 +39,11 @@
     <description>Bill of Materials - Dependency Versions</description>
     <name>${project.groupId}:${project.artifactId}</name>
     <url>http://code.simiacrypt.us/release/${project.version}/bom</url>
+    <distributionManagement>
+        <site>
+            <url>s3://code.simiacrypt.us/release/${project.version}/bom</url>
+        </site>
+    </distributionManagement>
 
     <dependencyManagement>
         <dependencies>
@@ -870,9 +875,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <distributionManagement>
-        <site>
-            <url>s3://code.simiacrypt.us/release/${project.version}/bom</url>
-        </site>
-    </distributionManagement>
 </project>
