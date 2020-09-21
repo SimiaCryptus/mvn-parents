@@ -1,15 +1,15 @@
-buildNumber.properties
-dependency-reduced-pom.xml
+
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
+*.hprof
 .idea/
-mvn-parents.iml
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
+buildNumber.properties
+dependency-reduced-pom.xml
+mvn-parents.iml
 pom.xml.next
 pom.xml.releaseBackup
 pom.xml.tag
 pom.xml.versionsBackup
 release.properties
 target/
-*.hprof
-
