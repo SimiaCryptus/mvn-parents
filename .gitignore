@@ -1,6 +1,7 @@
 
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 *.hprof
+*.pem
 .idea/
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
