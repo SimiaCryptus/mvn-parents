@@ -35,7 +35,7 @@
 
     <properties>
         <scala.mjversion>2.12</scala.mjversion>
-        <scala.version>2.12.12</scala.version>
+        <scala.version>2.12.15</scala.version>
         <spark.version>3.0.1</spark.version>
     </properties>
 
@@ -71,9 +71,21 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <recompileMode>all</recompileMode>
+                    <scalaVersion>${scala.version}</scalaVersion>
+
                     <args>
                         <arg>-target:jvm-1.8</arg>
                     </args>
+                    <verbose>true</verbose>
+                    <fork>true</fork>
+                    <displayCmd>true</displayCmd>
+                    <jvmArgs>
+                        <jvmArg>-Xmx4g</jvmArg>
+                    </jvmArgs>
+                    <addScalacArgs>-verbose</addScalacArgs>
+<!--                    <addScalacArgs>-Vphases</addScalacArgs>-->
+
                 </configuration>
             </plugin>
             <plugin>
@@ -105,7 +117,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.9.0</version>
+                <version>3.11.0</version>
             </plugin>
         </plugins>
     </build>
@@ -119,6 +131,23 @@
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
                 <version>4.3.1</version>
+                <configuration>
+                    <recompileMode>all</recompileMode>
+                    <scalaVersion>${scala.version}</scalaVersion>
+
+                    <args>
+                        <arg>-target:jvm-1.8</arg>
+                    </args>
+                    <verbose>true</verbose>
+                    <fork>true</fork>
+                    <displayCmd>true</displayCmd>
+                    <jvmArgs>
+                        <jvmArg>-Xmx4g</jvmArg>
+                    </jvmArgs>
+                    <addScalacArgs>-verbose</addScalacArgs>
+<!--                    <addScalacArgs>-Vphases</addScalacArgs>-->
+
+                </configuration>
             </plugin>
         </plugins>
     </reporting>
@@ -150,7 +179,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>2.2.1</version>
+                        <version>3.2.1</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -172,6 +201,23 @@
                                 </goals>
                             </execution>
                         </executions>
+                        <configuration>
+                            <recompileMode>all</recompileMode>
+                            <scalaVersion>${scala.version}</scalaVersion>
+
+                            <args>
+                                <arg>-target:jvm-1.8</arg>
+                            </args>
+                            <verbose>true</verbose>
+                            <fork>true</fork>
+                            <displayCmd>true</displayCmd>
+                            <jvmArgs>
+                                <jvmArg>-Xmx4g</jvmArg>
+                            </jvmArgs>
+                            <addScalacArgs>-verbose</addScalacArgs>
+<!--                            <addScalacArgs>-Vphases</addScalacArgs>-->
+
+                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
